@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0906">
+<meta name="description" content="Royal Nepali Kitchen - Authentic Nepali Cuisine">
+<title>Royal Nepali Kitchen</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Georgia,"Times New Roman",serif;
+    background:#f7f1e5;
+    color:#21180d;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:#0b0906;
+    border-bottom:1px solid #b78a32;
+    box-shadow:0 4px 20px rgba(0,0,0,.35);
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:10px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+/* ROYAL LOGO */
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#fff;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+    border:2px solid #d5a73a;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+        radial-gradient(circle,#3a2505,#120d06);
+    position:relative;
+    box-shadow:
+        0 0 10px rgba(213,167,58,.35),
+        inset 0 0 10px rgba(213,167,58,.15);
+}
+
+.logo::before{
+    content:"♛";
+    color:#e2b84c;
+    font-size:30px;
+    line-height:1;
+}
+
+.logoText{
+    line-height:1.05;
+}
+
+.logoText strong{
+    display:block;
+    font-size:18px;
+    letter-spacing:1px;
+    color:#e0b74d;
+}
+
+.logoText span{
+    display:block;
+    color:#fff;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+.navButtons{
+    display:flex;
+    gap:8px;
+}
+
+.navButtons a,
+.navButtons button{
+    border:1px solid #5e4720;
+    background:#17120b;
+    color:#fff;
+    padding:9px 12px;
+    border-radius:8px;
+    text-decoration:none;
+    cursor:pointer;
+    font-family:inherit;
+}
+
+.cartCount{
+    background:#d8a72e;
+    color:#111;
+    border-radius:20px;
+    padding:2px 7px;
+    font-weight:bold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:570px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:60px 20px;
+
+    background:
+        linear-gradient(
+            rgba(7,5,2,.72),
+            rgba(7,5,2,.80)
+        ),
+        url("https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+}
+
+.heroContent{
+    max-width:850px;
+}
+
+.heroLogo{
+    width:105px;
+    height:105px;
+    margin:0 auto 20px;
+    border:3px solid #d8ac3c;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(15,10,4,.9);
+    box-shadow:
+        0 0 30px rgba(213,167,58,.25),
+        inset 0 0 25px rgba(213,167,58,.1);
+}
+
+.heroLogo span{
+    font-size:65px;
+    color:#e2b84c;
+}
+
+.hero h1{
+    font-size:clamp(38px,8vw,76px);
+    letter-spacing:2px;
+    margin-bottom:12px;
+    color:#e2b84c;
+    text-shadow:0 3px 15px #000;
+}
+
+.hero h2{
+    color:white;
+    font-size:clamp(17px,4vw,25px);
+    font-weight:normal;
+    letter-spacing:5px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:#eee;
+    font-family:Arial,sans-serif;
+    line-height:1.7;
+}
+
+.heroButtons{
+    margin-top:28px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    border:0;
+    padding:14px 21px;
+    border-radius:8px;
+    text-decoration:none;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.goldBtn{
+    background:#d5a332;
+    color:#171008;
+}
+
+.darkBtn{
+    background:#fff;
+    color:#171008;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 18px;
+}
+
+.sectionTitle{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.sectionTitle small{
+    color:#a07925;
+    font-family:Arial,sans-serif;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.sectionTitle h2{
+    font-size:36px;
+    margin:8px 0;
+}
+
+.sectionTitle p{
+    color:#766b5c;
+    font-family:Arial,sans-serif;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories{
+    display:flex;
+    gap:9px;
+    overflow-x:auto;
+    padding-bottom:12px;
+    margin-bottom:25px;
+}
+
+.category{
+    flex-shrink:0;
+    padding:10px 17px;
+    border:1px solid #d5bd8a;
+    background:#fffaf0;
+    color:#3d2b11;
+    border-radius:30px;
+    cursor:pointer;
+    font-family:Arial,sans-serif;
+}
+
+.category.active{
+    background:#21170b;
+    color:#e4b747;
+    border-color:#21170b;
+}
+
+/* =========================
+   FOOD CARDS
+========================= */
+
+.menuGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
+    gap:20px;
+}
+
+.foodCard{
+    background:#fffdf8;
+    border:1px solid #eadabd;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(61,39,10,.09);
+    transition:.2s;
+}
+
+.foodCard:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 28px rgba(61,39,10,.15);
+}
+
+.foodImage{
+    width:100%;
+    height:205px;
+    object-fit:cover;
+    display:block;
+}
+
+.foodInfo{
+    padding:16px;
+}
+
+.foodInfo h3{
+    font-size:21px;
+    margin-bottom:7px;
+}
+
+.description{
+    color:#776d60;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    line-height:1.5;
+    min-height:42px;
+}
+
+.foodBottom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    margin-top:15px;
+}
+
+.price{
+    color:#a17218;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.addBtn{
+    border:0;
+    background:#171109;
+    color:#e2b84c;
+    padding:10px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.addBtn:hover{
+    background:#d5a332;
+    color:#111;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    max-width:none;
+    background:#100c07;
+    color:white;
+}
+
+.aboutInner{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 18px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about h2{
+    color:#dfb548;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.about p{
+    color:#d3cec4;
+    font-family:Arial,sans-serif;
+    line-height:1.75;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.feature{
+    border:1px solid #493716;
+    background:#19130a;
+    border-radius:12px;
+    padding:20px;
+}
+
+.feature strong{
+    display:block;
+    color:#e0b64b;
+    margin-bottom:7px;
+}
+
+.feature span{
+    color:#aaa;
+    font-family:Arial,sans-serif;
+    font-size:13px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contactBox{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:#fffdf8;
+    border:1px solid #e3c98f;
+    border-radius:15px;
+    padding:35px 20px;
+    box-shadow:0 5px 20px rgba(50,30,5,.08);
+}
+
+.contactBox h2{
+    font-size:31px;
+    margin-bottom:10px;
+}
+
+.contactBox p{
+    color:#766b5c;
+    font-family:Arial,sans-serif;
+}
+
+.contactButtons{
+    margin-top:22px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.whatsapp{
+    background:#25d366;
+    color:white;
+}
+
+.call{
+    background:#171109;
+    color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#080604;
+    color:#8e877b;
+    text-align:center;
+    padding:35px 18px;
+    font-family:Arial,sans-serif;
+    line-height:1.8;
+    border-top:1px solid #4a3618;
+}
+
+footer strong{
+    color:#dfb548;
+    font-family:Georgia,serif;
+    font-size:19px;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cartOverlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:2000;
+    display:none;
+}
+
+.cartOverlay.show{
+    display:block;
+}
+
+.cart{
+    position:absolute;
+    right:0;
+    top:0;
+    width:min(430px,100%);
+    height:100%;
+    background:#f7f1e5;
+    overflow-y:auto;
+    padding:20px;
+}
+
+.cartHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.closeCart{
+    width:36px;
+    height:36px;
+    border:0;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:22px;
+}
+
+.cartItem{
+    background:white;
+    border:1px solid #e3d5ba;
+    border-radius:10px;
+    padding:13px;
+    margin-bottom:10px;
+}
+
+.cartItemTop{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.cartItemName{
+    font-weight:bold;
+}
+
+.remove{
+    border:0;
+    background:none;
+    color:#b00000;
+    cursor:pointer;
+}
+
+.quantity{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:10px;
+}
+
+.quantity button{
+    width:30px;
+    height:30px;
+    border:0;
+    border-radius:6px;
+    background:#171109;
+    color:#e1b648;
+    cursor:pointer;
+}
+
+.cartTotal{
+    margin-top:15px;
+    background:#171109;
+    color:white;
+    padding:18px;
+    border-radius:11px;
+}
+
+.totalRow{
+    display:flex;
+    justify-content:space-between;
+    margin:6px 0;
+}
+
+.totalRow.final{
+    border-top:1px solid #4d3b20;
+    margin-top:12px;
+    padding-top:12px;
+    color:#e1b648;
+    font-size:21px;
+    font-weight:bold;
+}
+
+.orderForm{
+    background:white;
+    padding:16px;
+    border-radius:11px;
+    margin-top:15px;
+}
+
+.orderForm h3{
+    margin-bottom:12px;
+}
+
+.orderForm input,
+.orderForm textarea,
+.orderForm select{
+    width:100%;
+    border:1px solid #ddd0b7;
+    border-radius:7px;
+    padding:12px;
+    margin-bottom:10px;
+    font:inherit;
+}
+
+.orderForm textarea{
+    min-height:75px;
+    resize:vertical;
+}
+
+.orderButton{
+    width:100%;
+    border:0;
+    border-radius:8px;
+    background:#25d366;
+    color:white;
+    padding:14px;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.empty{
+    text-align:center;
+    color:#777;
+    padding:30px 10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .nav{
+        padding:9px 11px;
+    }
+
+    .logo{
+        width:42px;
+        height:42px;
+    }
+
+    .logo::before{
+        font-size:25px;
+    }
+
+    .logoText strong{
+        font-size:14px;
+    }
+
+    .logoText span{
+        font-size:8px;
+    }
+
+    .navButtons a{
+        display:none;
+    }
+
+    .hero{
+        min-height:520px;
+    }
+
+    .heroLogo{
+        width:90px;
+        height:90px;
+    }
+
+    .heroLogo span{
+        font-size:54px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero h2{
+        font-size:15px;
+        letter-spacing:3px;
+    }
+
+    .menuGrid{
+        grid-template-columns:repeat(2,1fr);
+        gap:11px;
+    }
+
+    .foodImage{
+        height:145px;
+    }
+
+    .foodInfo{
+        padding:11px;
+    }
+
+    .foodInfo h3{
+        font-size:16px;
+    }
+
+    .description{
+        font-size:12px;
+        min-height:54px;
+    }
+
+    .price{
+        font-size:16px;
+    }
+
+    .addBtn{
+        padding:8px;
+        font-size:12px;
+    }
+
+    .aboutInner{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:400px){
+
+    .menuGrid{
+        grid-template-columns:1fr;
+    }
+
+    .foodImage{
+        height:200px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<div class="nav">
+
+<a href="#" class="brand">
+
+<div class="logo"></div>
+
+<div class="logoText">
+<strong>ROYAL NEPALI</strong>
+<span>KITCHEN</span>
+</div>
+
+</a>
+
+<div class="navButtons">
+
+<a href="#menu">Menu</a>
+
+<a href="#contact">Contact</a>
+
+<button onclick="openCart()">
+🛒 Cart
+<span class="cartCount" id="cartCount">0</span>
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<div class="hero">
+
+<div class="heroContent">
+
+<div class="heroLogo">
+<span>♛</span>
+</div>
+
+<h1>ROYAL NEPALI KITCHEN</h1>
+
+<h2>AUTHENTIC NEPALI CUISINE</h2>
+
+<p>
+Experience the rich taste of Nepal with traditional momo,
+choila, sekuwa, sukuti and authentic Nepali curries.
+</p>
+
+<div class="heroButtons">
+
+<a href="#menu" class="btn goldBtn">
+🍽️ Explore Menu
+</a>
+
+<a
+href="https://wa.me/9779849160941"
+target="_blank"
+class="btn darkBtn">
+💬 WhatsApp Order
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     MENU
+========================= -->
+
+<section id="menu">
+
+<div class="sectionTitle">
+
+<small>OUR SPECIALITIES</small>
+
+<h2>Royal Menu</h2>
+
+<p>
+Traditional Nepali dishes prepared with rich spices and flavor.
+</p>
+
+</div>
+
+<div class="categories" id="categories"></div>
+
+<div class="menuGrid" id="menuGrid"></div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<div class="about">
+
+<div class="aboutInner">
+
+<div>
+
+<h2>A Taste Fit For Royalty</h2>
+
+<p>
+Royal Nepali Kitchen celebrates the traditional flavors of Nepal.
+From freshly prepared momo to spicy choila and grilled sekuwa,
+our menu brings popular Nepali dishes together in one place.
+</p>
+
+<br>
+
+<p>
+Our goal is simple: authentic taste, satisfying portions and a
+restaurant experience that feels special.
+</p>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+<strong>👑 Royal Experience</strong>
+<span>A premium Nepali restaurant experience.</span>
+</div>
+
+<div class="feature">
+<strong>🥩 Fresh Food</strong>
+<span>Food prepared fresh for your order.</span>
+</div>
+
+<div class="feature">
+<strong>🌶️ Traditional Flavor</strong>
+<span>Classic Nepali spices and cooking styles.</span>
+</div>
+
+<div class="feature">
+<strong>📱 Easy Ordering</strong>
+<span>Order directly through WhatsApp.</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="contactBox">
+
+<h2>Visit or Order From Us</h2>
+
+<p>
+Call Royal Nepali Kitchen or send your order directly through WhatsApp.
+</p>
+
+<div class="contactButtons">
+
+<a
+class="btn call"
+href="tel:9849160941">
+📞 9849160941
+</a>
+
+<a
+class="btn whatsapp"
+href="https://wa.me/9779849160941"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<strong>♛ ROYAL NEPALI KITCHEN</strong>
+
+<br>
+
+Authentic Nepali Cuisine
+
+<br>
+
+📞 9849160941
+
+<br>
+
+💬 WhatsApp: 9849160941
+
+<br><br>
+
+© 2026 Royal Nepali Kitchen
+
+</footer>
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<div class="cartOverlay" id="cartOverlay">
+
+<div class="cart">
+
+<div class="cartHeader">
+
+<h2>Your Order</h2>
+
+<button class="closeCart" onclick="closeCart()">×</button>
+
+</div>
+
+<div id="cartItems"></div>
+
+<div id="cartBottom"></div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================
+   MENU DATA
+========================================= */
+
+const foods = [
+
+{
+id:1,
+name:"Chicken Momo",
+category:"Momo",
+price:180,
+image:"https://images.unsplash.com/photo-1625220194771-7ebdea0b70b9?auto=format&fit=crop&w=900&q=85",
+description:"Juicy chicken dumplings served with spicy Nepali achar."
+},
+
+{
+id:2,
+name:"Buff Momo",
+category:"Momo",
+price:170,
+image:"https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=900&q=85",
+description:"Traditional buffalo meat dumplings with Nepali achar."
+},
+
+{
+id:3,
+name:"Mutton Momo",
+category:"Momo",
+price:220,
+image:"https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=900&q=85",
+description:"Mutton-filled dumplings with spicy dipping sauce."
+},
+
+{
+id:4,
+name:"Khasi Ko Masu",
+category:"Curry",
+price:450,
+image:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85",
+description:"Nepali-style goat curry cooked with aromatic spices."
+},
+
+{
+id:5,
+name:"Buff Sukuti",
+category:"Meat",
+price:400,
+image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",
+description:"Dried and spiced buffalo meat prepared Nepali-style."
+},
+
+{
+id:6,
+name:"Buff Choila",
+category:"Choila",
+price:350,
+image:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=85",
+description:"Spicy roasted buffalo meat with traditional Newari flavor."
+},
+
+{
+id:7,
+name:"Chicken Choila",
+category:"Choila",
+price:350,
+image:"https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=900&q=85",
+description:"Spicy grilled chicken prepared in traditional style."
+},
+
+{
+id:8,
+name:"Thakali Mutton Curry",
+category:"Curry",
+price:500,
+image:"https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85",
+description:"Rich mutton curry inspired by traditional Thakali cooking."
+},
+
+{
+id:9,
+name:"Chicken Sekuwa",
+category:"Sekuwa",
+price:300,
+image:"https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=900&q=85",
+description:"Marinated chicken grilled over heat."
+},
+
+{
+id:10,
+name:"Buff Sekuwa",
+category:"Sekuwa",
+price:300,
+image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",
+description:"Tender marinated buffalo meat grilled with spices."
+},
+
+{
+id:11,
+name:"Mutton Sekuwa",
+category:"Sekuwa",
+price:400,
+image:"https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=85",
+description:"Grilled marinated mutton with traditional spices."
+},
+
+{
+id:12,
+name:"Chicken Curry",
+category:"Curry",
+price:350,
+image:"https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85",
+description:"Nepali-style chicken curry with aromatic spices."
+},
+
+{
+id:13,
+name:"Kukhura Ko Masu",
+category:"Curry",
+price:350,
+image:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85",
+description:"Traditional Nepali chicken curry."
+},
+
+{
+id:14,
+name:"Buff Taas",
+category:"Meat",
+price:350,
+image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",
+description:"Spicy fried buffalo meat popular in western Nepal."
+},
+
+{
+id:15,
+name:"Mutton Taas",
+category:"Meat",
+price:450,
+image:"https://images.unsplash.com/photo-1558030006-450675393462?auto=format&fit=crop&w=900&q=85",
+description:"Spicy fried mutton prepared with Nepali spices."
+},
+
+{
+id:16,
+name:"Pork Choila",
+category:"Choila",
+price:400,
+image:"https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=900&q=85",
+description:"Spicy grilled pork with Nepali spices."
+},
+
+{
+id:17,
+name:"Pork Curry",
+category:"Curry",
+price:400,
+image:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=85",
+description:"Nepali-style pork curry with aromatic spices."
+},
+
+{
+id:18,
+name:"Newari Kachila",
+category:"Newari",
+price:350,
+image:"https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",
+description:"Traditional minced buffalo-meat Newari dish."
+}
+
+];
+
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+let cart=[];
+
+const menuGrid=document.getElementById("menuGrid");
+const categories=document.getElementById("categories");
+
+const categoryNames=[
+"All",
+...new Set(foods.map(food=>food.category))
+];
+
+categoryNames.forEach((category,index)=>{
+
+const button=document.createElement("button");
+
+button.className=
+"category "+(index===0?"active":"");
+
+button.textContent=category;
+
+button.onclick=()=>{
+
+document
+.querySelectorAll(".category")
+.forEach(b=>b.classList.remove("active"));
+
+button.classList.add("active");
+
+showFoods(category);
+
+};
+
+categories.appendChild(button);
+
+});
+
+
+/* =========================================
+   SHOW FOODS
+========================================= */
+
+function showFoods(category="All"){
+
+menuGrid.innerHTML="";
+
+const selected=
+category==="All"
+?foods
+:foods.filter(food=>food.category===category);
+
+selected.forEach(food=>{
+
+const card=document.createElement("div");
+
+card.className="foodCard";
+
+card.innerHTML=`
+
+<img
+class="foodImage"
+src="${food.image}"
+alt="${food.name}"
+loading="lazy"
+>
+
+<div class="foodInfo">
+
+<h3>${food.name}</h3>
+
+<div class="description">
+${food.description}
+</div>
+
+<div class="foodBottom">
+
+<div class="price">
+Rs. ${food.price}
+</div>
+
+<button
+class="addBtn"
+onclick="addToCart(${food.id})">
++ Add
+</button>
+
+</div>
+
+</div>
+`;
+
+menuGrid.appendChild(card);
+
+});
+
+}
+
+showFoods();
+
+
+/* =========================================
+   CART
+========================================= */
+
+function addToCart(id){
+
+const food=foods.find(item=>item.id===id);
+
+const existing=cart.find(item=>item.id===id);
+
+if(existing){
+
+existing.quantity++;
+
+}else{
+
+cart.push({
+...food,
+quantity:1
+});
+
+}
+
+updateCart();
+
+openCart();
+
+}
+
+
+function updateCart(){
+
+document.getElementById("cartCount").textContent=
+cart.reduce((sum,item)=>sum+item.quantity,0);
+
+const container=document.getElementById("cartItems");
+
+const bottom=document.getElementById("cartBottom");
+
+if(cart.length===0){
+
+container.innerHTML=
+`<div class="empty">Your cart is empty.</div>`;
+
+bottom.innerHTML="";
+
+return;
+
+}
+
+container.innerHTML="";
+
+cart.forEach(item=>{
+
+const div=document.createElement("div");
+
+div.className="cartItem";
+
+div.innerHTML=`
+
+<div class="cartItemTop">
+
+<div>
+
+<div class="cartItemName">
+${item.name}
+</div>
+
+<small>
+Rs. ${item.price} each
+</small>
+
+</div>
+
+<button
+class="remove"
+onclick="removeItem(${item.id})">
+Remove
+</button>
+
+</div>
+
+<div class="quantity">
+
+<button onclick="changeQuantity(${item.id},-1)">
+−
+</button>
+
+<strong>${item.quantity}</strong>
+
+<button onclick="changeQuantity(${item.id},1)">
++
+</button>
+
+<strong>
+Rs. ${item.price*item.quantity}
+</strong>
+
+</div>
+`;
+
+container.appendChild(div);
+
+});
+
+
+const total=
+cart.reduce(
+(sum,item)=>sum+item.price*item.quantity,
+0
+);
+
+bottom.innerHTML=`
+
+<div class="cartTotal">
+
+<div class="totalRow">
+
+<span>Items</span>
+
+<span>
+${cart.reduce((s,i)=>s+i.quantity,0)}
+</span>
+
+</div>
+
+<div class="totalRow final">
+
+<span>Total</span>
+
+<span>Rs. ${total}</span>
+
+</div>
+
+</div>
+
+
+<div class="orderForm">
+
+<h3>Customer Details</h3>
+
+<input
+id="customerName"
+placeholder="Your name"
+autocomplete="name"
+>
+
+<input
+id="customerPhone"
+placeholder="Phone number"
+type="tel"
+autocomplete="tel"
+>
+
+<select id="orderType">
+
+<option value="Pickup">
+Pickup
+</option>
+
+<option value="Delivery">
+Delivery
+</option>
+
+</select>
+
+<textarea
+id="customerAddress"
+placeholder="Address / pickup details"
+></textarea>
+
+<textarea
+id="orderNotes"
+placeholder="Special instructions"
+></textarea>
+
+<button
+class="orderButton"
+onclick="sendWhatsAppOrder()">
+💬 Send Order on WhatsApp
+</button>
+
+</div>
+`;
+
+}
+
+
+function changeQuantity(id,amount){
+
+const item=cart.find(item=>item.id===id);
+
+if(!item)return;
+
+item.quantity+=amount;
+
+if(item.quantity<=0){
+
+cart=cart.filter(item=>item.id!==id);
+
+}
+
+updateCart();
+
+}
+
+
+function removeItem(id){
+
+cart=cart.filter(item=>item.id!==id);
+
+updateCart();
+
+}
+
+
+function openCart(){
+
+document
+.getElementById("cartOverlay")
+.classList.add("show");
+
+updateCart();
+
+}
+
+
+function closeCart(){
+
+document
+.getElementById("cartOverlay")
+.classList.remove("show");
+
+}
+
+
+/* =========================================
+   WHATSAPP ORDER
+========================================= */
+
+function sendWhatsAppOrder(){
+
+if(cart.length===0){
+
+alert("Your cart is empty.");
+
+return;
+
+}
+
+const name=
+document.getElementById("customerName").value.trim();
+
+const phone=
+document.getElementById("customerPhone").value.trim();
+
+const orderType=
+document.getElementById("orderType").value;
+
+const address=
+document.getElementById("customerAddress").value.trim();
+
+const notes=
+document.getElementById("orderNotes").value.trim();
+
+
+if(!name){
+
+alert("Please enter your name.");
+
+return;
+
+}
+
+if(!phone){
+
+alert("Please enter your phone number.");
+
+return;
+
+}
+
+if(orderType==="Delivery"&&!address){
+
+alert("Please enter your delivery address.");
+
+return;
+
+}
+
+
+let message=
+"👑 *NEW ORDER - ROYAL NEPALI KITCHEN*%0A%0A";
+
+message+=
+"👤 Customer: "+
+encodeURIComponent(name)+
+"%0A";
+
+message+=
+"📞 Phone: "+
+encodeURIComponent(phone)+
+"%0A";
+
+message+=
+"📦 Type: "+
+encodeURIComponent(orderType)+
+"%0A";
+
+
+if(address){
+
+message+=
+"📍 Address: "+
+encodeURIComponent(address)+
+"%0A";
+
+}
+
+
+message+="%0A*ORDER ITEMS*%0A";
+
+let total=0;
+
+cart.forEach(item=>{
+
+const itemTotal=item.price*item.quantity;
+
+total+=itemTotal;
+
+message+=
+encodeURIComponent(
+item.name+
+" x "+
+item.quantity+
+" = Rs. "+
+itemTotal
+)+
+"%0A";
+
+});
+
+
+message+=
+"%0A💰 *TOTAL: Rs. "+
+total+
+"*%0A";
+
+
+if(notes){
+
+message+=
+"%0A📝 Notes: "+
+encodeURIComponent(notes);
+
+}
+
+
+const whatsappNumber="9779849160941";
+
+const url=
+"https://wa.me/"+
+whatsappNumber+
+"?text="+
+message;
+
+window.open(url,"_blank");
+
+}
+
+
+/* Close cart outside click */
+
+document
+.getElementById("cartOverlay")
+.addEventListener("click",function(e){
+
+if(e.target===this){
+
+closeCart();
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
